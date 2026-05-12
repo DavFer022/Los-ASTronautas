@@ -1,5 +1,5 @@
 # Los ASTronautas
-##"Explorando el universo de los lenguajes, un nodo a la vez"
+## "Explorando el universo de los lenguajes, un nodo a la vez"
 
 ### Integrantes del Grupo:
 - Albuquerque Sheen, V-25.933.680, Seccion 1
