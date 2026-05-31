@@ -1,0 +1,9 @@
+# Archivo de configuración del proyecto Rust
+# Grupo: Los ASTronautas
+
+[package]
+name = "collatz"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
