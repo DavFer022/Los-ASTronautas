@@ -1,5 +1,4 @@
 // ALGORITMO DE COLLATZ - BENCHMARKING
-// Tema 2 - Lenguajes y Compiladores
 // Grupo: Los ASTronautas
 //
 // Enunciado:
