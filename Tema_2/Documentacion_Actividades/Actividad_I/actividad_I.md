@@ -18,3 +18,5 @@ Matriz Descriptiva y Análisis de Paradigmática: Los estudiantes deben elaborar
 
 • Paradigma Lógico/Declarativo: Programación basada en relaciones, unificación, resolución de cláusulas de Horn y abstracción total del flujo de control por parte del programador. Paradigma Concurrente/Actores (Emergente): Modelos de paso de mensajes, aislamiento estricto de estado entre entidades concurrentes y mitigación de condiciones de carrera a nivel de diseño lingüístico.
 
+
+### Inicio de la Actividad I
