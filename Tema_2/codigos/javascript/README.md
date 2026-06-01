@@ -64,9 +64,11 @@ Ejecuta el programa al menos 3 veces y calcula el promedio de los tiempos.
 Registra los resultados en la tabla comparativa del informe.
 
 ## Enlaces de interés
-Conjetura de Collatz - Wikipedia
-Documentación oficial de Node.js
-Motor V8 de Google
+- [Conjetura de Collatz - Wikipedia](https://es.wikipedia.org/wiki/Conjetura_de_Collatz)
+- [Documentación oficial de Node.js](https://nodejs.org/es/docs/)
+- [Documentación oficial de JavaScript (MDN)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [Descargar Node.js](https://nodejs.org/es/)
+- [Motor V8 de Google](https://v8.dev/)
 
 ## Créditos
 Asignatura: Lenguajes y Compiladores (UNEG)
