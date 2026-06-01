@@ -32,3 +32,95 @@ La siguiente tabla sintetiza los cinco paradigmas fundamentales abordados en est
 | *Funcional* | Inmutabilidad de datos, funciones como ciudadanas de primer orden, evaluación de la referencia, transparencia referencial, ausencia de efectos colaterales | Código fiable, prueba y depuración, concurrencia natural por diseño | Curva de aprendizaje pronunciada, overhead por inmutabilidad, no intuitivo para problemas con estado intensivo | Haskell, Elixir, Rust, JavaScript |
 | *Lógico Declarativo* | Programación basada en relaciones, unificación, cláusulas de Horn, abstracción total del flujo de control por parte del programador | Alto nivel de abstracción, demostración automática de teoremas, ideal para sistemas de reglas | Bajo rendimiento en problemas grandes, ecosistema reducido, poca aplicación comercial | Prolog, Datalog |
 | *Concurrencia Actores* | Paso de mensajes entre entidades, aislamiento estricto de estado, mitigación de condiciones de carrera a nivel de diseño lingüístico, modelo "no share" | Concurrencia segura por diseño, ausencia de locks y deadlocks, escalabilidad horizontal | Overhead del paso de mensajes, depuración compleja, riesgo de desbordamiento de buzones | Erlang, Rust (vía librerías) |
+
+#### 2. Análisis Detallado por Paradigma
+
+##### 2.1 Paradigma Imperativo / Estructural
+
+###### Fundamento teórico
+
+El paradigma imperativo concibe el programa como una secuencia de instrucciones que modifican explícitamente el estado del sistema. La memoria es mutable por defecto y los efectos secundarios (modificación de variables, entrada/salida) constituyen el mecanismo normal de operación (Sebesta, 2016). Este paradigma se basa directamente en el modelo de la máquina de von Neumann: memoria, unidad aritmético-lógica, unidad de control y contador de programa (Aho et al., 2008).
+
+###### Caso de estudio: Zig como representante moderno
+
+Zig fue seleccionado en esta investigación como exponente contemporáneo del enfoque imperativo estructurado por las siguientes razones (Equipo de Documentación de Zig, 2024):
+
+- **Ausencia de variables ocultas:** No existe sobrecarga de operadores, ni preprocesador, ni flujo de control implícito (como excepciones no declaradas). Todo es explícito.
+- **Control directo de memoria:** El programador debe gestionar explícitamente la memoria mediante un `allocator`, sin recolector de basura.
+- **Metaprogramación en tiempo de compilación:** La palabra clave `comptime` permite ejecutar código en tiempo de compilación, eliminando overhead en tiempo de ejecución sin recurrir a macros complejas al estilo de C preprocesador.
+
+###### Relación con compiladores
+
+Los compiladores de lenguajes imperativos (incluyendo Zig) realizan intensos análisis de flujo de datos para detectar variables no inicializadas, usos después de liberación y código inalcanzable (Aho et al., 2008). La optimización de saltos condicionales y la predicción de bifurcaciones son críticas para el rendimiento.
+
+###### Ejemplo ilustrativo en Zig
+
+```zig
+const std = @import("std");
+
+pub fn main() !void {
+    var x: i32 = 10;
+    while (x > 0) {
+        std.debug.print("{}\n", .{x});
+        x -= 1;  // Mutación explícita del estado
+    }
+}
+```
+
+##### 2.2 Paradigma Orientado a Objetos (POO)
+
+###### Fundamento teórico
+
+La POO organiza el software como una colección de objetos discretos que combinan estado (atributos) y comportamiento (métodos). Los cuatro pilares clásicos son: encapsulamiento (ocultamiento de la representación interna), abstracción (modelado de entidades del dominio), herencia (reutilización mediante jerarquías) y polimorfismo (una interfaz, múltiples implementaciones) (Sebesta, 2016).
+
+###### Debate contemporáneo: Herencia vs Composición
+
+En la ingeniería de software moderna existe consenso en preferir la **composición sobre la herencia** (principio "Composition over Inheritance"). La herencia crea acoplamiento fuerte entre clases base y derivadas, mientras que la composición delega comportamiento a objetos independientes, incrementando la flexibilidad y el mantenimiento (Matsakis y Klock, 2014). Lenguajes como Rust han eliminado la herencia clásica en favor de **traits** (similares a interfaces con implementaciones por defecto), mientras que Python y JavaScript mantienen herencia pero promueven el uso de mixins y composición.
+
+###### Convergencia multiparadigma en Python
+
+Python, uno de los cuatro lenguajes de trabajo de esta investigación, ejemplifica la convergencia multiparadigma al integrar POO con características funcionales: permite definir clases, herencia múltiple y polimorfismo, pero también incluye funciones lambda, `map`, `filter`, `reduce` y comprensiones de listas típicamente asociadas al paradigma funcional (Python Software Foundation, 2024).
+
+###### Ejemplo ilustrativo en Python (composición preferida a herencia)
+
+```python
+# Enfoque de composición (recomendado)
+class Motor:
+    def encender(self):
+        return "Motor encendido"
+
+class Vehiculo:
+    def __init__(self):
+        self.motor = Motor()  # Composición
+    
+    def arrancar(self):
+        return self.motor.encender()
+```
+
+##### 2.3 Paradigma Funcional
+
+###### Fundamento teórico
+
+La programación funcional trata la computación como evaluación de funciones matemáticas, evitando estado mutable y datos mutables. Se basa en el **cálculo lambda** (Church, 1930s) como fundamento formal (Sebesta, 2016). Cuatro conceptos son esenciales:
+
+- **Inmutabilidad:** Una vez que un símbolo recibe un valor, este nunca cambia. Las "actualizaciones" crean nuevos valores sin modificar los originales.
+- **Funciones de primer orden:** Las funciones pueden ser asignadas a variables, pasadas como argumentos y retornadas desde otras funciones (funciones de orden superior).
+- **Transparencia referencial:** Una función con los mismos argumentos retorna siempre el mismo valor, sin efectos colaterales.
+- **Evaluación perezosa (lazy evaluation):** Las expresiones no se evalúan hasta que su valor es realmente necesario.
+
+###### Caso de estudio: Rust y el estilo funcional
+
+Rust, otro de los lenguajes de trabajo, incorpora un potente subsistema funcional basado en iteradores perezosos. Su sistema de ownership no entra en conflicto con la inmutabilidad; de hecho, las variables son inmutables por defecto (`let x = 5`), requiriendo `mut` explícito para mutabilidad (Fundación Rust, 2024).
+
+###### Ejemplo ilustrativo en Rust (iteradores funcionales)
+
+```rust
+fn main() {
+    let suma_pares_cuadrados: i32 = (1..=10)
+        .filter(|x| x % 2 == 0)   // Evaluación perezosa
+        .map(|x| x * x)           // Evaluación perezosa
+        .sum();                   // Evaluación forzada aquí
+    
+    println!("{}", suma_pares_cuadrados); // 220 (4+16+36+64+100)
+}
+```
