@@ -55,7 +55,7 @@ Los compiladores de lenguajes imperativos (incluyendo Zig) realizan intensos an�
 
 ###### Ejemplo ilustrativo en Zig
 
-zig
+```zig
 const std = @import("std");
 
 pub fn main() !void {
@@ -65,6 +65,7 @@ pub fn main() !void {
         x -= 1;  // Mutación explícita del estado
     }
 }
+```
 
 ##### 2.2 Paradigma Orientado a Objetos (POO)
 
@@ -94,3 +95,32 @@ class Vehiculo:
     
     def arrancar(self):
         return self.motor.encender()
+```
+
+##### 2.3 Paradigma Funcional
+
+###### Fundamento teórico
+
+La programación funcional trata la computación como evaluación de funciones matemáticas, evitando estado mutable y datos mutables. Se basa en el **cálculo lambda** (Church, 1930s) como fundamento formal (Sebesta, 2016). Cuatro conceptos son esenciales:
+
+- **Inmutabilidad:** Una vez que un símbolo recibe un valor, este nunca cambia. Las "actualizaciones" crean nuevos valores sin modificar los originales.
+- **Funciones de primer orden:** Las funciones pueden ser asignadas a variables, pasadas como argumentos y retornadas desde otras funciones (funciones de orden superior).
+- **Transparencia referencial:** Una función con los mismos argumentos retorna siempre el mismo valor, sin efectos colaterales.
+- **Evaluación perezosa (lazy evaluation):** Las expresiones no se evalúan hasta que su valor es realmente necesario.
+
+###### Caso de estudio: Rust y el estilo funcional
+
+Rust, otro de los lenguajes de trabajo, incorpora un potente subsistema funcional basado en iteradores perezosos. Su sistema de ownership no entra en conflicto con la inmutabilidad; de hecho, las variables son inmutables por defecto (`let x = 5`), requiriendo `mut` explícito para mutabilidad (Fundación Rust, 2024).
+
+###### Ejemplo ilustrativo en Rust (iteradores funcionales)
+
+```rust
+fn main() {
+    let suma_pares_cuadrados: i32 = (1..=10)
+        .filter(|x| x % 2 == 0)   // Evaluación perezosa
+        .map(|x| x * x)           // Evaluación perezosa
+        .sum();                   // Evaluación forzada aquí
+    
+    println!("{}", suma_pares_cuadrados); // 220 (4+16+36+64+100)
+}
+```
