@@ -152,3 +152,41 @@ balance_positivo :- genera_solar(X), demanda_industrial(Y), X > Y.
 % Consulta
 ?- balance_positivo.  % Responde: true
 ```
+
+##### 2.5 Paradigma Concurrente / Actores
+
+###### Fundamento teórico
+
+El modelo de actores (Hewitt, Bishop y Steiger, 1973) resuelve los problemas de la concurrencia clásica (locks, deadlocks, condiciones de carrera) mediante un diseño radicalmente diferente: los actores son entidades autónomas que poseen estado privado, se comunican exclusivamente mediante mensajes asíncronos, procesan un mensaje a la vez, y pueden crear otros actores (Armstrong, 2013).
+
+###### Comparación con threading clásico
+
+| Característica | Threads con memoria compartida | Modelo de Actores |
+|----------------|--------------------------------|-------------------|
+| Compartición de estado | Memoria compartida explícita | Ninguna (paso de mensajes) |
+| Sincronización | Locks, semáforos, monitores | Por diseño (cola de mensajes) |
+| Riesgos principales | Deadlocks, race conditions, livelocks | Overflow de buzón, mensajes huérfanos |
+| Escalabilidad en multicore | Limitada por contención de locks | Alta (sin bloqueo global) |
+
+###### Convergencia multiparadigma en los lenguajes de trabajo
+
+- **Rust:** No tiene actores en la biblioteca estándar, pero ofrece canales (`std::sync::mpsc`) para paso de mensajes y librerías como `actix` que implementan el modelo completo (Fundación Rust, 2024).
+- **JavaScript:** Web Workers + `postMessage` proporcionan aislamiento de estado y paso de mensajes, esencial para aplicaciones web con procesamiento en paralelo (Mozilla Developer Network, 2024).
+- **Python:** El módulo `multiprocessing` con `Queue` implementa un estilo similar a actores aunque con mayor overhead (Python Software Foundation, 2024).
+
+###### Ejemplo ilustrativo conceptual (JavaScript con Web Worker)
+
+```javascript
+// worker.js
+self.onmessage = function(event) {
+    let resultado = procesar(event.data);
+    self.postMessage(resultado);
+};
+
+// main.js
+const worker = new Worker('worker.js');
+worker.postMessage(datos);
+worker.onmessage = function(event) {
+    console.log('Resultado:', event.data);
+};
+```
