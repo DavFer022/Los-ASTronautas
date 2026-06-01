@@ -55,7 +55,7 @@ Los compiladores de lenguajes imperativos (incluyendo Zig) realizan intensos an�
 
 ###### Ejemplo ilustrativo en Zig
 
-```zig
+zig
 const std = @import("std");
 
 pub fn main() !void {
@@ -65,3 +65,32 @@ pub fn main() !void {
         x -= 1;  // Mutación explícita del estado
     }
 }
+
+##### 2.2 Paradigma Orientado a Objetos (POO)
+
+###### Fundamento teórico
+
+La POO organiza el software como una colección de objetos discretos que combinan estado (atributos) y comportamiento (métodos). Los cuatro pilares clásicos son: encapsulamiento (ocultamiento de la representación interna), abstracción (modelado de entidades del dominio), herencia (reutilización mediante jerarquías) y polimorfismo (una interfaz, múltiples implementaciones) (Sebesta, 2016).
+
+###### Debate contemporáneo: Herencia vs Composición
+
+En la ingeniería de software moderna existe consenso en preferir la **composición sobre la herencia** (principio "Composition over Inheritance"). La herencia crea acoplamiento fuerte entre clases base y derivadas, mientras que la composición delega comportamiento a objetos independientes, incrementando la flexibilidad y el mantenimiento (Matsakis y Klock, 2014). Lenguajes como Rust han eliminado la herencia clásica en favor de **traits** (similares a interfaces con implementaciones por defecto), mientras que Python y JavaScript mantienen herencia pero promueven el uso de mixins y composición.
+
+###### Convergencia multiparadigma en Python
+
+Python, uno de los cuatro lenguajes de trabajo de esta investigación, ejemplifica la convergencia multiparadigma al integrar POO con características funcionales: permite definir clases, herencia múltiple y polimorfismo, pero también incluye funciones lambda, `map`, `filter`, `reduce` y comprensiones de listas típicamente asociadas al paradigma funcional (Python Software Foundation, 2024).
+
+###### Ejemplo ilustrativo en Python (composición preferida a herencia)
+
+```python
+# Enfoque de composición (recomendado)
+class Motor:
+    def encender(self):
+        return "Motor encendido"
+
+class Vehiculo:
+    def __init__(self):
+        self.motor = Motor()  # Composición
+    
+    def arrancar(self):
+        return self.motor.encender()
