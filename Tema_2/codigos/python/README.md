@@ -62,9 +62,10 @@ Ejecuta el programa al menos 3 veces y calcula el promedio de los tiempos.
 Registra los resultados en la tabla comparativa del informe.
 
 ## Enlaces de interés
-Conjetura de Collatz - Wikipedia
-Documentación oficial de Python
-Descargar Python
+- [Conjetura de Collatz - Wikipedia](https://es.wikipedia.org/wiki/Conjetura_de_Collatz)
+- [Documentación oficial de Python](https://docs.python.org/es/3/)
+- [Descargar Python](https://www.python.org/downloads/)
+- [PyPI (índice de paquetes de Python)](https://pypi.org/)
 
 ## Créditos
 Asignatura: Lenguajes y Compiladores (UNEG)
