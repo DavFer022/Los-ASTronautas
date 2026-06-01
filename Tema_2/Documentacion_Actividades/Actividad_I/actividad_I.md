@@ -124,3 +124,31 @@ fn main() {
     println!("{}", suma_pares_cuadrados); // 220 (4+16+36+64+100)
 }
 ```
+
+##### 2.4 Paradigma Lógico / Declarativo
+
+###### Fundamento teórico
+
+A diferencia de los paradigmas anteriores, la programación lógica no especifica *cómo* resolver un problema, sino *qué* se quiere resolver. El programador declara hechos y reglas, y un motor de inferencia encuentra soluciones mediante unificación y backtracking (Sebesta, 2016).
+
+###### Abstracción del flujo de control
+
+El programador no escribe bucles ni condicionales explícitos. La recursión y la búsqueda son gestionadas automáticamente por el intérprete lógico. Esto representa el nivel más alto de abstracción entre los paradigmas analizados (Van Roy y Haridi, 2004).
+
+###### Limitaciones y aplicación actual
+
+Aunque el rendimiento es bajo para problemas de gran escala, la programación lógica encuentra aplicación en sistemas expertos, motores de reglas de negocio, procesamiento de grafos de conocimiento y verificación formal de software.
+
+###### Ejemplo ilustrativo (Prolog conceptual)
+
+```prolog
+% Hechos
+genera_solar(100).   % Generación solar: 100 kW
+demanda_industrial(80).  % Demanda: 80 kW
+
+% Regla de balance energético
+balance_positivo :- genera_solar(X), demanda_industrial(Y), X > Y.
+
+% Consulta
+?- balance_positivo.  % Responde: true
+```
