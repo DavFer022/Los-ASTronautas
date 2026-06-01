@@ -190,3 +190,26 @@ worker.onmessage = function(event) {
     console.log('Resultado:', event.data);
 };
 ```
+
+#### 3. Convergencia Multiparadigma en Lenguajes Modernos
+
+El fenómeno más relevante en la evolución de los lenguajes de programación es la hibridación multiparadigma (Sebesta, 2016). Los cuatro lenguajes seleccionados para esta investigación evidencian esta tendencia:
+
+| Lenguaje | Paradigma Principal | Paradigmas Integrados | Justificación de diseño |
+|----------|--------------------|-----------------------|------------------------|
+| **Zig** | Imperativo / Estructural | Funcional (parcial con `comptime`), metaprogramación | Reemplazar a C con control explícito pero añadiendo capacidades de metaprogramación modernas sin macros (Equipo de Documentación de Zig, 2024). |
+| **Python** | Multiparadigma (OO + Imperativo) | Funcional (lambda, map, filter, comprehensions) | Versatilidad para ciencia de datos, scripting y desarrollo web; sacrifica rendimiento por legibilidad (Python Software Foundation, 2024). |
+| **Rust** | Multiparadigma (Funcional + Imperativo) | Traits (similar a OO sin herencia), paso de mensajes (canales) | Seguridad de memoria sin GC + alto rendimiento; toma lo mejor de funcional (inmutabilidad) e imperativo (control fino) (Matsakis y Klock, 2014; Fundación Rust, 2024). |
+| **JavaScript** | Multiparadigma (Prototípico + Funcional) | Imperativo, eventos, asíncrono (non-blocking) | Originalmente scripting web; evolucionó para servidores (Node.js) con modelo asíncrono y estilo funcional (Mozilla Developer Network, 2024). |
+
+#### Análisis Crítico de la Convergencia
+
+La industria del software ha abandonado el dogma de la pureza paradigmática por razones prácticas (Sebesta, 2016):
+
+1. **Demandas del mercado:** Un lenguaje debe ser competente en múltiples dominios: desarrollo web, sistemas embebidos, ciencia de datos y servidores de alto rendimiento. Ningún paradigma puro cubre todos estos casos de uso de manera eficiente.
+
+2. **Curva de aprendizaje suave:** Los equipos de desarrollo ya conocen POO e imperativo. Introducir gradualmente características funcionales (como lambdas en Java 8 o `map`/`filter` en Python) es más viable que migrar a lenguajes puramente funcionales como Haskell, que requieren un cambio radical de mentalidad.
+
+3. **Rendimiento vs Abstracción:** El programador moderno necesita alto nivel para productividad (funcional) y bajo nivel para optimización (imperativo). Rust es el ejemplo más logrado de esta síntesis, ofreciendo abstracciones de alto costo cero (zero-cost abstractions) sin sacrificar el control sobre el hardware (Matsakis y Klock, 2014).
+
+4. **Concurrencia obligatoria:** Con el estancamiento de la ley de Moore y el auge de los procesadores multicore, los modelos de paso de mensajes y actores se integran en lenguajes previamente imperativos. La transparencia referencial del paradigma funcional elimina por diseño las condiciones de carrera, una ventaja demasiado valiosa para ignorarla (Armstrong, 2013).
