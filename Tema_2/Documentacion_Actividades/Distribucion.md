@@ -2,9 +2,9 @@
 
 | Actividad | Descripción | Responsable | Estado |
 |-----------|-------------|-------------|--------|
-| **Actividad I** | Matriz de paradigmas y convergencia multiparadigma | Antoima Mariangel | Pendiente |
-| **Actividad II (Zig + Python)** | Benchmarking, análisis morfológico y sintáctico | Alburquerque Sheen | Pendiente |
-| **Actividad II (Rust + JS)** | Benchmarking, análisis morfológico y sintáctico | Varguillas Génesis | Pendiente |
+| **Actividad I** | Matriz de paradigmas y convergencia multiparadigma | Antoima Mariangel | Completado |
+| **Actividad II (Zig + Python)** | Benchmarking, análisis morfológico y sintáctico | Alburquerque Sheen | Completado |
+| **Actividad II (Rust + JS)** | Benchmarking, análisis morfológico y sintáctico | Varguillas Génesis | Completado |
 | **Actividad III** | Diseño del DSL Lenguaje L para ECO-GRID | García Carlos | Pendiente |
 | **Informe final** | Unificar y dar formato APA | Líder (Sheen) | Pendiente |
 | **Presentación** | Diapositivas para defensa | Todos (cada uno la suya) | Pendiente |
