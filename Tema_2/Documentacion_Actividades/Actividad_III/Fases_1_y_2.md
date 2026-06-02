@@ -1,6 +1,5 @@
 # Fase 1: Diseño del Alfabeto y Reglas Léxicas (Morfología)
 
-### v1.0
 A continuación se detallan los caracteres aceptados por el lenguaje, así como sus delimitadores y reglas para crear identificadores.
 ## 1. Especificación Léxica 
 El analizador léxico procesa la entrada basándose en las siguientes reglas estructurales:
