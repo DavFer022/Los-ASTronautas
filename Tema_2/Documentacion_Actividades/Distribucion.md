@@ -7,5 +7,5 @@
 | **Actividad II (Rust + JS)** | Benchmarking, análisis morfológico y sintáctico | Varguillas Génesis | Completado |
 | **Actividad III** | Diseño del DSL Lenguaje L para ECO-GRID | García Carlos | Completado |
 | **Informe final** | Unificar y dar formato APA | Líder (Sheen) | Completado |
-| **Presentación** | Diapositivas para defensa | Todos (cada uno la suya) | Pendiente |
+| **Presentación** | Diapositivas para defensa | Todos (cada uno la suya) | Completado |
 | **Videos de defensa** | Grabación individual (10 min c/u) | Cada integrante | Pendiente |
