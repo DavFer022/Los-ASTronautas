@@ -28,7 +28,7 @@ Este trabajo aborda el estudio de los lenguajes de programación desde cuatro di
 ---
 
 ## Estructura del repositorio (Tema 2)
-
+```
 Tema_2/
 ├── Documentacion_Actividades/
 │   ├── Actividad_I/
@@ -56,7 +56,7 @@ Tema_2/
 ├── Informe_Tema_2_LosASTronautas.pdf
 ├── Presentación_Tema2_LosASTronautas.pdf
 └── README.md
-
+```
 ---
 
 ## Documentación del proceso (Documentacion_Actividades)
