@@ -80,17 +80,17 @@ G = (V, Σ, P, S)
 
 ### Producciones (P)
 
-| Regla   | Alternativas                             |
-| ------- | ---------------------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | --- |
-| S       | MOV <br> MOV JAQUE                       |
-| MOV     | PEON <br> PIEZA <br> ENROQUE             |
-| PEON    | COL FILA <br> COL x COL FILA             |
-| PIEZA   | PIEZAID COL FILA <br> PIEZAID x COL FILA |
-| PIEZAID | K <br> Q <br> R <br> B <br> N            |
-| ENROQUE | O-O                                      |
-| JAQUE   | +                                        |
-| COL     | a \\                                     | b \\ | c \\ | d \\ | e \\ | f \\ | g \\ | h   |
-| FILA    | 1 \\                                     | 2 \\ | 3 \\ | 4 \\ | 5 \\ | 6 \\ | 7 \\ | 8   |
+| Regla   | Alternativas                        |
+| ------- | ----------------------------------- |
+| S       | MOV<br>MOV JAQUE                    |
+| MOV     | PEON<br>PIEZA <br>ENROQUE           |
+| PEON    | COL, FIL, COL x FILA                |
+| PIEZA   | PIEZAID COL FILA PIEZAID x COL FILA |
+| PIEZAID | K Q R B N                           |
+| ENROQUE | O-O                                 |
+| JAQUE   | +                                   |
+| COL     | a\|b\|c\|d\|e\|f\|g\|h              |
+| FILA    | 1\|2\|3\|4\|5\|6\|7\|8              |
 
 ### Ejemplos de derivaciones
 
