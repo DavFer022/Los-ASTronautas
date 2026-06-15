@@ -23,20 +23,20 @@ de instrucciones para una "tortuga gráfica":
 
 ```
 .
-├── docs/
+├── documentacion/
 │   ├── gramatica.md      # Definicion formal G = (N, Sigma, P, S)
 │   └── derivaciones.md   # 5 derivaciones paso a paso + interpretacion
 ├── src/
 │   ├── core.py            # Logica de interpretacion (independiente de UI)
 │   ├── interprete.py       # Intérprete interactivo con turtle (GUI)
 │   └── generar_imagenes.py # Genera previsualizaciones PNG con matplotlib
-├── examples/               # Cadenas terminales de las 5 derivaciones
+├── ejemplos/               # Cadenas terminales de las 5 derivaciones
 │   ├── cuadrado.txt
 │   ├── arbol_simple.txt
 │   ├── arbol_ramificado.txt
 │   ├── arbol_simetrico.txt
 │   └── cubo.txt
-├── images/                 # Previsualizaciones generadas (PNG)
+├── imagenes/                 # Previsualizaciones generadas (PNG)
 └── requirements.txt
 ```
 
@@ -60,7 +60,7 @@ cd src
 python3 generar_imagenes.py
 ```
 
-Esto crea/actualiza los archivos PNG en `images/` para las 5 figuras.
+Esto crea/actualiza los archivos PNG en `imageness/` para las 5 figuras.
 
 ### 2. Intérprete interactivo (con interfaz gráfica, usa `turtle`)
 
@@ -96,5 +96,5 @@ Autómatas / Compiladores**:
   ramificadas (plantas, fractales), aquí aplicados sobre el alfabeto
   del genoma como caso práctico de bioinformática.
 
-Ver `docs/gramatica.md` para la definición formal completa y
-`docs/derivaciones.md` para las 5 derivaciones detalladas.
+Ver `documentacion/gramatica.md` para la definición formal completa y
+`documentacins/derivaciones.md` para las 5 derivaciones detalladas.
