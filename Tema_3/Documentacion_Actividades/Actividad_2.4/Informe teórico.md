@@ -102,3 +102,130 @@ G = (V, Σ, P, S)
 | Captura de pieza    | Qxe5, Bxc4  |
 | Enroque             | O-O         |
 | Jaque               | Qh5+, Nxf7+ |
+
+# Diseño de la Expresión Regular
+
+## Expresión regular completa
+
+```regex
+(
+[a-h][1-8]
+|
+[a-h]x[a-h][1-8]
+|
+[KQRBN][a-h][1-8]
+|
+[KQRBN]x[a-h][1-8]
+|
+O-O
+)
+\+?
+```
+
+## Versión compacta
+
+```regex
+([a-h][1-8]|[a-h]x[a-h][1-8]|[KQRBN][a-h][1-8]|[KQRBN]x[a-h][1-8]|O-O)\+?
+```
+
+## Tabla de simbolos
+
+| Subtítulo         | Descripción                                     | Símbolos / regex     | Ejemplos                     |
+| ----------------- | ----------------------------------------------- | -------------------- | ---------------------------- |
+| Columna           | Columna origen o destino                        | `[a-h]`              | -                            |
+| Fila              | Fila origen o destino                           | `[1-8]`              | -                            |
+| Piezas            | Identificador de pieza                          | `[KQRBN]`            | -                            |
+| Peón simple       | Movimiento básico de peón                       | `[a-h][1-8]`         | e4, d5, a3                   |
+| Peón con captura  | Captura de peón                                 | `[a-h]x[a-h][1-8]`   | exd5, cxb2                   |
+| Pieza simple      | Movimiento básico de pieza                      | `[KQRBN][a-h][1-8]`  | Nf3, Bc4, Re1, Qh5, Ke2      |
+| Pieza con captura | Captura de pieza                                | `[KQRBN]x[a-h][1-8]` | Nxe5, Bxh7, Rxa7, Qxe5, Kxf3 |
+| Enroque corto     | Enroque corto válido                            | `O-O`                | O-O                          |
+| Jaque             | Jaque opcional al final de un movimiento válido | `\+`                 | Qh5+, Nxf7+                  |
+
+# Definición formal del AFD
+
+Sea:
+
+```text
+M = (Q, Σ, δ, q0, F)
+```
+
+Donde:
+
+### Estados
+
+```text
+Q = {
+q0, q1, q2, q3, q4, q5, q6, q7,
+q8, q9, q10, q11,
+qF,
+qDead
+}
+```
+
+### Estado inicial
+
+```text
+q0
+```
+
+### Estados de aceptación
+
+```text
+F = { qF }
+```
+
+---
+
+## Clases de símbolos
+
+| **Símbolo** | **Significado** |
+| ----------- | --------------- |
+| COL         | a,b,c,d,e,f,g,h |
+| FILA        | 1,2,3,4,5,6,7,8 |
+| PIEZA       | K,Q,R,B,N       |
+| x           | captura         |
+| +           | jaque           |
+| O           | enroque         |
+| -           | guion           |
+
+---
+
+## Representacion
+
+```mermaid
+stateDiagram-v2
+
+    [*] --> q0
+
+    q0 --> q1 : COL (a-h)
+    q0 --> q2 : PIEZA (K,Q,R,B,N)
+    q0 --> q8 : O
+
+    %% Peón simple
+    q1 --> qF : FILA (1-8)
+
+    %% Peón captura
+    q1 --> q3 : x
+    q3 --> q6 : COL
+    q6 --> qF : FILA
+
+    %% Pieza simple
+    q2 --> q4 : COL
+    q4 --> qF : FILA
+
+    %% Pieza captura
+    q2 --> q5 : x
+    q5 --> q7 : COL
+    q7 --> qF : FILA
+
+    %% Enroque
+    q8 --> q9 : \-
+    q9 --> qF : O
+
+    %% Jaque opcional
+    qF --> q10 : \+
+
+    state qF <<accepting>>
+    state q10 <<accepting>>
+```
