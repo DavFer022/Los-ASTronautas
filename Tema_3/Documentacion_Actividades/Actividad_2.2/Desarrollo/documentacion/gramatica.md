@@ -74,5 +74,5 @@ G = (N, Sigma, P, S)
   representando la cara frontal y la cara posterior, más las aristas
   de profundidad), no como una proyección 3D exacta.
 
-Ver `docs/derivaciones.md` para las 5 derivaciones completas paso a
-paso y `examples/` para las cadenas terminales resultantes.
+Ver `documentacion/derivaciones.md` para las 5 derivaciones completas paso a
+paso y `ejemplos/` para las cadenas terminales resultantes.
