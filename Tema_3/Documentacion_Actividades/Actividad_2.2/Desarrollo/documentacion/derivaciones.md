@@ -1,6 +1,6 @@
 # Derivaciones de la GLC (5 ejemplos)
 
-Gramática de referencia: `docs/gramatica.md`.
+Gramática de referencia: `documentacion/gramatica.md`.
 Notación: `S ⇒(n) ...` indica que se aplicó la producción `(n)`.
 
 ---
@@ -22,8 +22,8 @@ S ⇒(1) CUADRADO
 lado de longitud unitaria y cada `c` gira 90°. Como 4 × 90° = 360°, el
 trazo regresa al punto y orientación iniciales, cerrando un cuadrado.
 
-Archivo asociado: `examples/cuadrado.txt`
-Imagen: `images/cuadrado.png`
+Archivo asociado: `ejemplos/cuadrado.txt`
+Imagen: `imageness/cuadrado.png`
 
 ---
 
@@ -49,8 +49,8 @@ regresa al tronco; `c` gira para retomar la dirección del tronco, que
 continúa y finaliza también en una hoja (`aa`). Resultado: árbol con
 una rama y dos hojas.
 
-Archivo asociado: `examples/arbol_simple.txt`
-Imagen: `images/arbol_simple.png`
+Archivo asociado: `ejemplos/arbol_simple.txt`
+Imagen: `imagenes/arbol_simple.png`
 
 ---
 
@@ -82,8 +82,8 @@ hoja; al cerrar la rama principal, el tronco original termina en su
 propia hoja. Resultado: árbol con tres niveles de ramificación y tres
 hojas, análogo a la recursividad de un Sistema-L.
 
-Archivo asociado: `examples/arbol_ramificado.txt`
-Imagen: `images/arbol_ramificado.png`
+Archivo asociado: `ejemplos/arbol_ramificado.txt`
+Imagen: `imagenes/arbol_ramificado.png`
 
 ---
 
@@ -112,8 +112,8 @@ segunda rama lateral simétrica (`g...aa...t`) con hoja; finalmente `c`
 retoma la dirección del tronco, que concluye en su propia hoja.
 Resultado: árbol con dos ramas simétricas y tres hojas en total.
 
-Archivo asociado: `examples/arbol_simetrico.txt`
-Imagen: `images/arbol_simetrico.png`
+Archivo asociado: `ejemplos/arbol_simetrico.txt`
+Imagen: `imagenes/arbol_simetrico.png`
 
 ---
 
@@ -144,5 +144,5 @@ caras. La figura resultante es una representación conceptual en 2D del
 cubo (dos caras superpuestas con un giro + aristas de profundidad), no
 una proyección 3D exacta.
 
-Archivo asociado: `examples/cubo.txt`
-Imagen: `images/cubo.png`
+Archivo asociado: `ejemplos/cubo.txt`
+Imagen: `imagenes/cubo.png`
