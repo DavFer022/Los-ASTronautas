@@ -10,7 +10,7 @@ Indique el concepto y al menos un ejemplo práctico de la relación entre Gramá
 
 Explique los 4 tipos de gramáticas de la Jerarquía de Chomsky. Para cada tipo, proporcione un ejemplo práctico representado en notación BNF (Backus-Naur Form).
 
-#Desarrollo
+# Desarrollo
 
 # Fundamentos y Jerarquía de las Gramáticas Formales
 
