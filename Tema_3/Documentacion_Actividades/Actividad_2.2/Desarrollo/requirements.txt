@@ -1,0 +1,6 @@
+# Dependencias para generar_imagenes.py (renderizado headless)
+matplotlib>=3.7
+
+# interprete.py usa el modulo "turtle" de la libreria estandar de
+# Python (requiere Tkinter instalado en el sistema, normalmente ya
+# incluido en la mayoria de instalaciones de Python de escritorio).
