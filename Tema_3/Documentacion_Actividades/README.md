@@ -15,6 +15,7 @@ Este directorio contiene la documentación del proceso de trabajo colaborativo p
 
 Cada subcarpeta contiene:
 - `README.md` con la descripción de la actividad y su avance
+- Códigos
 - Borradores y notas de investigación
 - Imágenes o diagramas
 - Archivos de apoyo
