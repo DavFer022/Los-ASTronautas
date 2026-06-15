@@ -97,4 +97,4 @@ Autómatas / Compiladores**:
   del genoma como caso práctico de bioinformática.
 
 Ver `documentacion/gramatica.md` para la definición formal completa y
-`documentacins/derivaciones.md` para las 5 derivaciones detalladas.
+`documentacion/derivaciones.md` para las 5 derivaciones detalladas.
