@@ -133,3 +133,63 @@ gramática es el fundamento teórico de los analizadores léxicos.
 
 Esta gramática genera identificadores como \"x\", \"variable1\",
 \"contador2\", etc.
+
+### Tipo 2 (Libre de Contexto) - Expresiones Aritméticas
+
+Las gramáticas tipo 2 son fundamentales para definir la sintaxis de los
+lenguajes de programación, permitiendo estructuras anidadas como
+paréntesis balanceados o bloques de código. Hopcroft et al. (2006)
+señalan que la mayoría de los lenguajes de programación tienen una
+sintaxis que puede ser descrita por una GLC.
+
+\<E\> ::= \<E\> \"+\" \<T\> \| \<T\>
+
+\<T\> ::= \<T\> \"\*\" \<F\> \| \<F\>
+
+\<F\> ::= \"(\" \<E\> \")\" \| \"a\" \| \"b\" \| \"c\"
+
+Esta gramática genera expresiones aritméticas como \"a + b \* c\" o
+\"(a + b) \* c\", respetando la jerarquía de operadores.
+
+### Tipo 1 (Sensible al Contexto) - Lenguaje aⁿbⁿcⁿ
+
+Las gramáticas tipo 1 son más potentes que las libres de contexto y
+pueden generar lenguajes que requieren "recordar" contextos. Un
+ejemplo clásico es el lenguaje { aⁿbⁿcⁿ | n ≥ 1 }, que NO puede ser
+generado por una gramática tipo 2 (Kozen, 1997).
+
+\<S\> ::= \"a\" \<S\> \"B\" \"C\" \| \"a\" \"B\" \"C\"
+
+\<C\> \"B\" ::= \"B\" \<C\>
+
+\"a\" \"B\" ::= \"a\" \"b\"
+
+\"b\" \"B\" ::= \"b\" \"b\"
+
+\"b\" \"C\" ::= \"b\" \"c\"
+
+\"c\" \"C\" ::= \"c\" \"c\"
+
+*Las reglas contextuales como \<C\> \"B\" → \"B\" \<C\> permiten
+reorganizar los símbolos para generar cadenas con igual número de a's,
+b's y c's* (Sudkamp, 2006).
+
+### Tipo 0 (Sin Restricciones) - Gramática Universal
+
+Las gramáticas tipo 0 no tienen restricciones en sus producciones. El
+lenguaje generado por este tipo de gramática es equivalente al que puede
+reconocer una Máquina de Turing, lo que representa el máximo poder
+computacional. Sipser (2012) explica que estos lenguajes son los más
+generales que se pueden definir computacionalmente.
+
+\<S\> ::= \"a\" \<A\> \"c\"
+
+\<A\> ::= \<B\> \"b\" \| \"b\"
+
+\"b\" \<B\> ::= \<B\> \"b\"
+
+\<B\> \"c\" ::= \"b\" \<A\> \"c\"
+
+Esta gramática ejemplifica cómo las reglas pueden tener múltiples
+símbolos tanto en el lado izquierdo como en el derecho, sin
+restricciones de longitud o contexto.
