@@ -84,3 +84,52 @@ S ⇒ NP VP ⇒ wheat VP ⇒ wheat grows
 
 El lenguaje generado por esta gramática es L(G1) = {rice grows, wheat
 grows}.
+
+## Jerarquía de Chomsky
+
+La Jerarquía de Chomsky, propuesta por el lingüista Noam Chomsky en
+1959, clasifica las gramáticas formales en cuatro tipos según la
+complejidad de sus reglas de producción. Esta clasificación establece
+una relación directa entre el poder expresivo de la gramática y la
+capacidad computacional necesaria para procesar el lenguaje generado
+(Chomsky, 1959).
+
+### Tabla Resumen de los 4 Tipos
+
+| Tipo | Nombre | Restricción de Producciones | Lenguaje Generado | Autómata Reconocedor |
+|------|--------|----------------------------|-------------------|----------------------|
+| Tipo 3 | Regular | A → aB o A → a (con A,B ∈ N, a ∈ Σ) | Lenguaje Regular | Autómata Finito |
+| Tipo 2 | Libre de Contexto (GLC) | A → γ (A ∈ N, γ ∈ (N ∪ Σ)*) | Lenguaje Libre de Contexto | Autómata de Pila (PDA) |
+| Tipo 1 | Sensible al Contexto (GSC) | αAβ → αγβ con γ ≠ ε | Lenguaje Sensible al Contexto | Autómata Linealmente Acotado |
+| Tipo 0 | Sin Restricciones | α → β (α debe contener al menos un no terminal) | Lenguaje Recursivamente Enumerable | Máquina de Turing |
+
+*Fuente: Elaboración propia basada en Chomsky (1959) y Hopcroft et al. (2006)*
+
+### Tipo 3 (Regular) - Identificadores en Lenguajes de Programación
+
+Las gramáticas tipo 3 (regulares) son suficientes y altamente eficientes
+para el análisis léxico, como la identificación de tokens (palabras
+clave, números, identificadores). Según Sudkamp (2006), este tipo de
+gramática es el fundamento teórico de los analizadores léxicos.
+
+\<letra\> ::= \"a\" \| \"b\" \| \"c\" \| \"d\" \| \"e\" \| \"f\" \|
+\"g\" \| \"h\" \| \"i\" \| \"j\" \| \"k\" \| \"l\" \| \"m\" \|
+
+\"n\" \| \"ñ\" \| \"o\" \| \"p\" \| \"q\" \| \"r\" \| \"s\" \| \"t\" \|
+\"u\" \| \"v\" \| \"w\" \| \"x\" \| \"y\" \| \"z\" \|
+
+\"A\" \| \"B\" \| \"C\" \| \"D\" \| \"E\" \| \"F\" \| \"G\" \| \"H\" \|
+\"I\" \| \"J\" \| \"K\" \| \"L\" \| \"M\" \|
+
+\"N\" \| \"O\" \| \"P\" \| \"Q\" \| \"R\" \| \"S\" \| \"T\" \| \"U\" \|
+\"V\" \| \"W\" \| \"X\" \| \"Y\" \| \"Z\"
+
+\<digito\> ::= \"0\" \| \"1\" \| \"2\" \| \"3\" \| \"4\" \| \"5\" \|
+\"6\" \| \"7\" \| \"8\" \| \"9\"
+
+\<identificador\> ::= \<letra\> \| \<letra\> \<resto\>
+
+\<resto\> ::= \<letra\> \<resto\> \| \<digito\> \<resto\> \| ε
+
+Esta gramática genera identificadores como \"x\", \"variable1\",
+\"contador2\", etc.
