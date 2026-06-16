@@ -27,10 +27,10 @@ Una gramática es ambigua si existe al menos una cadena que puede ser derivada m
 **Ejemplo de gramática ambigua para expresiones aritméticas:**
 ```text
 <E> ::= <E> + <E> | <E> * <E> | id
-```
-**Cadena ambigua:** id + id * id
 
-**Árbol de derivación 1** (interpretación: (id + id) * id):
+Cadena ambigua: id + id * id
+
+Árbol de derivación 1 (interpretación: (id + id) * id):
 
            <E>
          /  |  \
@@ -40,7 +40,7 @@ Una gramática es ambigua si existe al menos una cadena que puede ser derivada m
      |     |
     id    id
        
-**Árbol de derivación 2** (interpretación: id + (id * id)):
+Árbol de derivación 2 (interpretación: id + (id * id)):
        
        <E>
       / | \
@@ -50,15 +50,15 @@ Una gramática es ambigua si existe al menos una cadena que puede ser derivada m
         |     |
        id    id
 
-**Solución:** Reescribir la gramática introduciendo niveles de precedencia:
-```text
+Solución: Reescribir la gramática introduciendo niveles de precedencia:
+
 <E> ::= <E> + <T> | <T>
 <T> ::= <T> * <F> | <F>
 <F> ::= id | "(" <E> ")"
-```
+
 Esta gramática elimina la ambigüedad porque fuerza la precedencia de los operadores: la multiplicación (*) tiene mayor prioridad que la suma (+) (Aho et al., 2008).
 
-
+```
 ## b) Recursividad por la Izquierda
 
 Un problema común en los analizadores sintácticos descendentes (top-down) es la recursividad por la izquierda. Una gramática es recursiva por la izquierda si contiene una regla de la forma A → A α. Esto provoca bucles infinitos en los analizadores recursivos.
@@ -67,10 +67,10 @@ Un problema común en los analizadores sintácticos descendentes (top-down) es l
 ```text
 <E> ::= <E> + <T> | <T>
 <T> ::= id
-```
-**Cadena problemática:** id + id + id
 
-**Algoritmo de eliminación de recursividad por la izquierda:**
+Cadena problemática: id + id + id
+
+Algoritmo de eliminación de recursividad por la izquierda:
 
 Dada una regla de la forma A → A α | β (donde β no comienza con A), se transforma en:
 
@@ -78,27 +78,27 @@ A  → β A'
 A' → α A' | ε
 
 
-**Aplicación paso a paso a la gramática anterior:**
+Aplicación paso a paso a la gramática anterior:
 
 1.	Identificar la regla problemática: <E> → <E> + <T> | <T>
 
 Aquí A = <E>, α = + <T>, β = <T>
 
 2.	Aplicar la transformación:
-```text
+
 <E> → <T> <E'>
 <E'> → + <T> <E'> | ε
-```
+
 3.	La gramática resultante (sin recursividad por la izquierda) es:
-```text
-**<E>  → <T> <E'>
+
+<E>  → <T> <E'>
 <E'> → + <T> <E'> | ε
-<T>  → id**
-```
+<T>  → id
+
 
 Esta gramática puede ser procesada sin problemas por un analizador descendente (Hopcroft, Motwani & Ullman, 2007).
 
-
+```
 ## c) Factorización por la Izquierda
 
 Es una técnica que se aplica cuando dos o más reglas de un mismo no terminal comparten un prefijo común. Esto causa ambigüedad temporal en el analizador, que no sabe qué regla elegir hasta leer más tokens.
@@ -106,11 +106,11 @@ Es una técnica que se aplica cuando dos o más reglas de un mismo no terminal c
 **Ejemplo de gramática que requiere factorización:**
 ```text
 <A> ::= id = <E> | id ( <E> )
-```
+
 
 Ambas reglas comienzan con el prefijo común id. El analizador no puede decidir qué regla aplicar hasta leer el siguiente token (= o ().
 
-**Algoritmo de factorización por la izquierda:**
+Algoritmo de factorización por la izquierda:
 
 Dadas las reglas de la forma A → α β₁ | α β₂ | ... | α βₙ, se transforman en:
 
@@ -118,18 +118,13 @@ A  → α A'
 A' → β₁ | β₂ | ... | βₙ
 
 
-**Aplicación a la gramática anterior:**
+Aplicación a la gramática anterior:
 
 1.	Identificar el prefijo común: α = id
 2.	Identificar los sufijos: β₁ = = <E> y β₂ = ( <E> )
 3.	Aplicar la transformación.
 
-**Gramática optimizada resultante:**
-```text
-**<A>  → id <A'>
-<A'> → = <E> | ( <E> )**
-```
+Gramática optimizada resultante:
 
-Esta gramática factorizada permite al analizador leer el token id y luego decidir qué camino tomar basándose en el siguiente token (si es = o () (Aho et al., 2008).
-
-
+<A>  → id <A'>
+<A'> → = <E> | ( <E> )
