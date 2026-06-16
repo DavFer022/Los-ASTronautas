@@ -24,7 +24,7 @@ Cada subcarpeta contiene:
 
 | Integrante | Actividad | Estado |
 |------------|-----------|--------|
-| Mariangel Antoima | 2.1 | Pendiente |
-| Génesis Varguillas | 2.2 | Pendiente |
-| Sheen Alburquerque | 2.3 | Pendiente |
-| Carlos García | 2.4 | Pendiente |
+| Mariangel Antoima | 2.1 | Completado |
+| Génesis Varguillas | 2.2 | Completado |
+| Sheen Alburquerque | 2.3 | Completado |
+| Carlos García | 2.4 | Completado |
