@@ -26,7 +26,7 @@ Una gramática es ambigua si existe al menos una cadena que puede ser derivada m
 
 **Ejemplo de gramática ambigua para expresiones aritméticas:**
 
-<E> ::= <E> + <E> | <E> * <E> | id
+**<E> ::= <E> + <E> | <E> * <E> | id**
 
 **Cadena ambigua:** id + id * id
 
@@ -52,9 +52,9 @@ Una gramática es ambigua si existe al menos una cadena que puede ser derivada m
 
 **Solución:** Reescribir la gramática introduciendo niveles de precedencia:
 
-<E> ::= <E> + <T> | <T>
+**<E> ::= <E> + <T> | <T>
 <T> ::= <T> * <F> | <F>
-<F> ::= id | "(" <E> ")"
+<F> ::= id | "(" <E> ")"**
 
 Esta gramática elimina la ambigüedad porque fuerza la precedencia de los operadores: la multiplicación (*) tiene mayor prioridad que la suma (+) (Aho et al., 2008).
 
