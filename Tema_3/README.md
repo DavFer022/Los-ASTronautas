@@ -45,7 +45,7 @@ Tema_3/
 | Entregable | Enlace |
 |------------|--------|
 | **Informe de investigación (PDF)** | [Ver PDF](./Informe_Tema_3_LosASTronautas.pdf) |
-| **Presentación (PDF)** | [Ver PDF](./Presentacion_Tema_3_LosASTronautas.pptx) |
+| **Presentación (PDF)** | [Ver PDF](./Presentacion_Tema_3_LosASTronautas.pdf) |
 | **Video de defensa** | [Ver en Google Drive](https://drive.google.com/file/d/1FnhGqTU5aIMJocc5sycnnKb3_BP0OoNo/view) |
 
 ---
