@@ -108,6 +108,7 @@ CMD ["echo", "Hola mundo"]
 
 ### Analizando: pruebas/Dockerfile1
 
+```
 TOKEN                LEXEMA                    LÍNEA  COLUMNA
 -----------------------------------------------------------------
 FROM                 FROM                      2      1
@@ -123,6 +124,7 @@ COMMA                ,                         4      12
 IDENTIFIER           Hola                      4      15
 IDENTIFIER           mundo                     4      20
 RBRACKET             ]                         4      26
+```
 
 Ejemplo 2: Dockerfile2 (configuración de entorno)
 Entrada (pruebas/Dockerfile2):
@@ -140,7 +142,7 @@ CMD ["python", "app.py"]
 Salida:
 
 Analizando: pruebas/Dockerfile2
-
+```
 TOKEN                LEXEMA                    LÍNEA  COLUMNA
 -----------------------------------------------------------------
 FROM                 FROM                      2      1
@@ -162,6 +164,7 @@ IDENTIFIER           python                    7      7
 COMMA                ,                         7      14
 IDENTIFIER           app.py                    7      17
 RBRACKET             ]                         7      24
+```
 
 Ejemplo 3: Dockerfile_error (errores léxicos)
 Entrada (pruebas/Dockerfile_error):
@@ -175,7 +178,7 @@ COPY . /app
 Salida:
 
 Analizando: pruebas/Dockerfile_error
-
+```
 TOKEN                LEXEMA                    LÍNEA  COLUMNA
 -----------------------------------------------------------------
 FROM                 FROM                      1      1
@@ -188,6 +191,7 @@ COPY                 COPY                      3      1
 ERROR                .                         3      6
 ERROR                /                         3      8
 IDENTIFIER           app                       3      9
+```
 
 ## Cómo funciona el código
 1. Definición de tokens
