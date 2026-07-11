@@ -23,7 +23,7 @@ Cada subcarpeta contiene:
 - Archivos de apoyo
 ---
 
-## ✅ Estado de las actividades
+## Estado de las actividades
 
 | Actividad | Responsable | Estado |
 |-----------|-------------|--------|
