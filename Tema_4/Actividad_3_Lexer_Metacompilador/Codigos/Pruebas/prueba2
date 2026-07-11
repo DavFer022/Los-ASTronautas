@@ -1,0 +1,11 @@
+// Prueba de estructuras: Condicionales y funciones con retorno
+fn evaluar_limite(valor: i32) -> bool {
+    let mut resultado: bool = false;
+
+    if valor == 100 {
+        resultado = true;
+    } else {
+        resultado = false;
+    }
+
+    return resultado;

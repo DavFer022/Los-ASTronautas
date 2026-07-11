@@ -1,0 +1,10 @@
+// Prueba de Robustez: Manejo de espacios, comentarios y errores léxicos
+fn analizar() {
+    let precio: i32 = 500;
+    
+    // El carácter '$' y '@' no pertenecen al lenguaje Rust/L creado
+    let impuesto$ = 15; 
+    let @usuario: bool = true;
+
+    let total = precio + 10.50; 
+}
