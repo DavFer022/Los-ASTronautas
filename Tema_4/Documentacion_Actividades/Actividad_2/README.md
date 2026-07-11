@@ -63,7 +63,7 @@ Construir un analizador léxico que verifique archivos Dockerfile, identificando
 
 ## Estructura del repositorio
 ```
-Tema_4/codigos/Actividad_2/
+Tema_4/Documentacion_Actividades/Actividad_2/
 ├── docker_lexer.py # Código fuente del lexer
 ├── README.md # Este archivo
 └── pruebas/
