@@ -22,7 +22,7 @@ tokens = [
     ('SHELL', r'\bSHELL\b'),
 
     # Identificadores (nombres de variables, rutas, etc.)
-    ('IDENTIFIER', r'[a-zA-Z_][a-zA-Z0-9_./-]*'),
+    ('IDENTIFIER', r'[a-zA-Z0-9_][a-zA-Z0-9_./-]*'),
 
     # Números
     ('NUMBER', r'\b\d+(\.\d+)?\b'),
@@ -35,6 +35,18 @@ tokens = [
     ('LBRACE', r'\{'),
     ('RBRACE', r'\}'),
     ('SEMICOLON', r';'),
+
+    # Caracteres especiales válidos en Dockerfile
+    ('COLON', r':'),
+    ('SLASH', r'/'),
+    ('DOT', r'\.'),
+    ('DASH', r'-'),
+    ('AMPERSAND', r'&'),
+    ('QUOTE', r'"'),
+    ('PIPE', r'\|'),
+    ('GREATER', r'>'),
+    ('LESS', r'<'),
+    ('AT', r'@'),
 
     # Comentarios
     ('COMMENT', r'#.*'),
