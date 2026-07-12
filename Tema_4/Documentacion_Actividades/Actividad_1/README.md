@@ -224,6 +224,7 @@ Un Autómata Finito tiene un número fijo de estados. Para reconocer aⁿbⁿ, n
 ### El Autómata de Pila en la Jerarquía de Chomsky
 
 La Jerarquía de Chomsky clasifica los lenguajes formales en cuatro niveles:
+
 Lenguajes Recursivamente Enumerables (Máquinas de Turing) - Tipo 0
                     ↑
 Lenguajes Sensibles al Contexto (Autómatas Linealmente Acotados) - Tipo 1
@@ -232,4 +233,65 @@ Lenguajes Libres de Contexto (Autómatas de Pila) - Tipo 2    ← ¡Aquí estamo
                     ↑
 Lenguajes Regulares (Autómatas Finitos) - Tipo 3
 
+
 El Autómata de Pila es el modelo teórico que reconoce exactamente los Lenguajes Libres de Contexto, que son la base de la mayoría de los lenguajes de programación modernos.
+
+
+## 1.4. Utilidades y Aplicaciones del Autómata de Pila
+
+El Autómata de Pila no es solo un concepto teórico; tiene aplicaciones prácticas fundamentales en la informática:
+
+### 1.4.1. Construcción de Compiladores (Análisis Sintáctico)
+
+- Los **analizadores sintácticos (parsers)** como **LL(1)**, **LR(0)**, **SLR**, **LALR** y **LR(1)** están basados en la teoría de Autómatas de Pila.
+- Herramientas como **YACC** (Yet Another Compiler Compiler) y **Bison** generan analizadores sintácticos a partir de gramáticas libres de contexto, implementando internamente un Autómata de Pila.
+
+### 1.4.2. Procesamiento de Lenguajes Naturales
+
+- Los AP se utilizan para analizar la estructura gramatical de oraciones en procesamiento de lenguaje natural.
+- Permiten manejar estructuras recursivas como cláusulas subordinadas.
+
+### 1.4.3. Validación de Documentos Estructurados
+
+- Validación de XML y HTML: verificar que las etiquetas estén correctamente anidadas y balanceadas.
+- Validación de JSON: verificar que los corchetes y llaves estén balanceados.
+
+### 1.4.4. Evaluación de Expresiones Aritméticas
+
+- Las calculadoras y los intérpretes de expresiones utilizan pilas para evaluar expresiones con paréntesis anidados y operadores de diferente precedencia (Algoritmo Shunting-yard de Dijkstra).
+
+### 1.4.5. Reconocimiento de Patrones Avanzados
+
+- Búsqueda de patrones que requieren "memoria" de lo que se ha visto antes, como en herramientas de análisis de logs y detección de intrusiones.
+
+### 1.4.6. Teoría de la Computación
+
+- El AP es un paso fundamental para entender la jerarquía de Chomsky y la capacidad de las máquinas computacionales.
+- Sirve como puente conceptual entre los autómatas finitos y las máquinas de Turing.
+
+
+## 1.5. Conclusión de la Actividad 1
+
+En esta actividad se ha abordado el concepto del **Autómata de Pila** como una extensión natural de los Autómatas Finitos que incorpora una memoria auxiliar en forma de pila. Esta adición, aparentemente simple, confiere a la máquina un poder computacional significativamente mayor, permitiéndole reconocer los **Lenguajes Libres de Contexto**, que son la base de la sintaxis de casi todos los lenguajes de programación.
+
+### Reflexión Final
+
+- **Poder Computacional:** El Autómata de Pila es más poderoso que los AFD/AFND porque puede "recordar" una cantidad ilimitada de información a través de la pila, lo que le permite contar y manejar estructuras anidadas, como se demostró en los ejemplos de aⁿbⁿ y palíndromos.
+
+- **Limitación:** Sin embargo, el AP es menos poderoso que una Máquina de Turing, ya que su acceso a la memoria está restringido a la cima de la pila, mientras que una Máquina de Turing puede acceder a cualquier posición de su cinta.
+
+### Importancia en la Ingeniería Informática
+
+- **Fundamento Teórico:** El AP proporciona la base matemática para la construcción de analizadores sintácticos, una de las partes más complejas y críticas de un compilador.
+
+- **Aplicación Práctica:** Herramientas como **Flex** (para análisis léxico) y **Bison** (para análisis sintáctico) son implementaciones prácticas de la teoría de autómatas, y su correcto uso depende del entendimiento profundo de estos conceptos.
+
+- **Relevancia en el Tema 4:** Entender el Autómata de Pila es esencial para comprender que el análisis léxico (reconocido por AFD) es solo el primer paso. La siguiente fase, el análisis sintáctico, requiere el poder del AP para validar la estructura del programa fuente.
+
+---
+
+### Referencias
+
+Jurado Málaga, E. (2008). *Teoría de autómatas y lenguajes formales.* Universidad de Extremadura, Servicio de Publicaciones.
+
+Aho, A. V., Sethi, R., & Ullman, J. D. (1998). *Compiladores: Principios, técnicas y herramientas.* Pearson Educación.
