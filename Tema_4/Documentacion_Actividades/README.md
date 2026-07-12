@@ -28,8 +28,8 @@ Cada subcarpeta contiene:
 | Actividad | Responsable | Estado |
 |-----------|-------------|--------|
 | Actividad 1 | Mariangel Antoima | Pendiente |
-| Actividad 2 | Sheen Alburquerque | Pendiente |
-| Actividad 3 | Carlos García | Pendiente |
+| Actividad 2 | Sheen Alburquerque | Completado |
+| Actividad 3 | Carlos García | Completado |
 | Actividad 4 | Génesis Varguillas | Pendiente |
 | Informe final | Líder (Sheen) | Pendiente |
 | Presentación | Todos | Pendiente |
