@@ -2,12 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <dirent.h>   /* para listar directorios (solo Linux/Unix) */
+#include <dirent.h>  
 
 
 /* Función auxiliar para imprimir en formato tabla */
 void imprimir_token(const char *tipo, const char *lexema) {
-    /* Ancho fijo: 20 caracteres para el tipo, luego el lexema */
     printf("%-20s %s\n", tipo, lexema);
 }
 
@@ -169,7 +168,7 @@ false       { imprimir_token("BOOL", yytext); }
 [ \t\r\n]+  { /* ignorar */ }
 
  /* Error */
-.           { printf("ERROR LÉXICO: carácter inesperado '%s' en línea %d\n", yytext, yylineno); }
+.           { printf("ERROR LEXICO: caracter inesperado '%s' en línea %d\n", yytext, yylineno); }
 
 %%
 
@@ -229,18 +228,18 @@ int main(int argc, char **argv) {
     }
 
     while (1) {
-        printf("\n=== MENÚ DE PRUEBAS ===\n");
+        printf("\n=== MENU DE PRUEBAS ===\n");
         for (int i = 0; i < n; i++) {
             printf("%d. %s\n", i+1, archivos[i]);
         }
         printf("0. Salir\n");
-        printf("Seleccione una opción: ");
+        printf("Seleccione una opcion: ");
 
         int opcion;
         scanf("%d", &opcion);
         if (opcion == 0) break;
         if (opcion < 1 || opcion > n) {
-            printf("Opción inválida.\n");
+            printf("Opcion invalida.\n");
             continue;
         }
 

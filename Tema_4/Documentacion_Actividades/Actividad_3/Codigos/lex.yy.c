@@ -1492,7 +1492,7 @@ YY_RULE_SETUP
 case 124:
 YY_RULE_SETUP
 #line 172 "rust_lexer.l"
-{ printf("ERROR LÉXICO: carácter inesperado '%s' en línea %d\n", yytext, yylineno); }
+{ printf("ERROR LEXICO: caracter inesperado '%s' en línea %d\n", yytext, yylineno); }
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
@@ -2442,18 +2442,18 @@ int main(int argc, char **argv) {
     }
 
     while (1) {
-        printf("\n=== MENÚ DE PRUEBAS ===\n");
+        printf("\n=== MENU DE PRUEBAS ===\n");
         for (int i = 0; i < n; i++) {
             printf("%d. %s\n", i+1, archivos[i]);
         }
         printf("0. Salir\n");
-        printf("Seleccione una opción: ");
+        printf("Seleccione una opcion: ");
 
         int opcion;
         scanf("%d", &opcion);
         if (opcion == 0) break;
         if (opcion < 1 || opcion > n) {
-            printf("Opción inválida.\n");
+            printf("Opcion invalida.\n");
             continue;
         }
 
