@@ -87,13 +87,16 @@ cd Los-ASTronautas/Tema_4/codigos/Actividad_2
 ### 2. Ejecutar el lexer
 Analizar el archivo por defecto (pruebas/Dockerfile1):
 
+```
 python docker_lexer.py
+```
 
 Analizar un archivo específico:
-
+```
 python docker_lexer.py pruebas/Dockerfile2
 python docker_lexer.py pruebas/Dockerfile3
 python docker_lexer.py pruebas/Dockerfile_error
+```
 
 # Ejemplos de ejecución
 Ejemplo 1: Dockerfile1 (imagen base simple)
