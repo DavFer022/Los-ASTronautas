@@ -1,11 +1,8 @@
-// Prueba de estructuras: Condicionales y funciones con retorno
-fn evaluar_limite(valor: i32) -> bool {
-    let mut resultado: bool = false;
+// Prueba básica: Declaración de variables y tipos
+fn main() {
+    let mut x: i32 = 42;
+    let y: f64 = 3.1416;
+    let control: bool = true;
 
-    if valor == 100 {
-        resultado = true;
-    } else {
-        resultado = false;
-    }
-
-    return resultado;
+    x = x + 10 * 2;
+}

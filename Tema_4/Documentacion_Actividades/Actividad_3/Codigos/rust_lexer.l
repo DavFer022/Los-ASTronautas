@@ -142,9 +142,7 @@ false       { imprimir_token("BOOL", yytext); }
 "&"         { imprimir_token("OP", yytext); }
 "|"         { imprimir_token("OP", yytext); }
 "^"         { imprimir_token("OP", yytext); }
-"@"         { imprimir_token("OP", yytext); }
 "#"         { imprimir_token("OP", yytext); }
-"$"         { imprimir_token("OP", yytext); }
 "?"         { imprimir_token("OP", yytext); }
 "."         { imprimir_token("DOT", yytext); }
 ","         { imprimir_token("COMMA", yytext); }
@@ -168,7 +166,7 @@ false       { imprimir_token("BOOL", yytext); }
 [ \t\r\n]+  { /* ignorar */ }
 
  /* Error */
-.           { printf("ERROR LEXICO: caracter inesperado '%s' en línea %d\n", yytext, yylineno); }
+.           { printf("ERROR LEXICO: caracter inesperado '%s' en linea %d\n", yytext, yylineno); }
 
 %%
 
