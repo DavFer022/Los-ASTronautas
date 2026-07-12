@@ -35,8 +35,15 @@ Construir un analizador léxico que verifique archivos Dockerfile, identificando
 | `STOPSIGNAL` | Señal de parada | `STOPSIGNAL SIGTERM` |
 | `HEALTHCHECK` | Verificación de salud | `HEALTHCHECK CMD curl` |
 | `SHELL` | Shell por defecto | `SHELL ["/bin/sh", "-c"]` |
-| `IDENTIFIER` | Nombres de variables, rutas | `ubuntu`, `/app`, `python` |
+| `IDENTIFIER` | Nombres de variables, rutas, valores | `ubuntu`, `/app`, `python`, `30s` |
 | `NUMBER` | Valores numéricos | `80`, `8080`, `1.0` |
+| `COLON` | Dos puntos | `:` |
+| `SLASH` | Barra inclinada | `/` |
+| `DOT` | Punto | `.` |
+| `DASH` | Guion | `-` |
+| `AMPERSAND` | Ampersand | `&` |
+| `QUOTE` | Comillas dobles | `"` |
+| `AT` | Arroba | `@` |
 | `EQUALS` | Asignación | `=` |
 | `COMMA` | Separador | `,` |
 | `LBRACKET` | Corchete izquierdo | `[` |
@@ -47,7 +54,7 @@ Construir un analizador léxico que verifique archivos Dockerfile, identificando
 | `COMMENT` | Comentario | `# Esto es un comentario` |
 | `SKIP` | Espacios y tabuladores | (ignorado) |
 | `NEWLINE` | Nueva línea | (control) |
-| `ERROR` | Carácter no reconocido | `@`, `$` |
+| `ERROR` | Carácter no reconocido | `$`, `#` (fuera de comentario) |
 
 ---
 
@@ -93,6 +100,7 @@ python docker_lexer.py
 
 Analizar un archivo específico:
 ```
+python docker_lexer.py pruebas/Dockerfile1
 python docker_lexer.py pruebas/Dockerfile2
 python docker_lexer.py pruebas/Dockerfile3
 python docker_lexer.py pruebas/Dockerfile_error
@@ -116,16 +124,21 @@ TOKEN                LEXEMA                    LÍNEA  COLUMNA
 -----------------------------------------------------------------
 FROM                 FROM                      2      1
 IDENTIFIER           ubuntu                    2      6
-NUMBER               22.04                     2      13
+COLON                :                         2      12
+IDENTIFIER           22.04                     2      13
 RUN                  RUN                       3      1
 IDENTIFIER           apt-get                   3      5
 IDENTIFIER           update                    3      13
 CMD                  CMD                       4      1
 LBRACKET             [                         4      5
+QUOTE                "                         4      6
 IDENTIFIER           echo                      4      7
+QUOTE                "                         4      11
 COMMA                ,                         4      12
+QUOTE                "                         4      14
 IDENTIFIER           Hola                      4      15
 IDENTIFIER           mundo                     4      20
+QUOTE                "                         4      25
 RBRACKET             ]                         4      26
 ```
 
@@ -150,22 +163,30 @@ TOKEN                LEXEMA                    LÍNEA  COLUMNA
 -----------------------------------------------------------------
 FROM                 FROM                      2      1
 IDENTIFIER           python                    2      6
-NUMBER               3.12                      2      13
+COLON                :                         2      12
+IDENTIFIER           3.12                      2      13
 WORKDIR              WORKDIR                   3      1
+SLASH                /                         3      9
 IDENTIFIER           app                       3      10
 COPY                 COPY                      4      1
+DOT                  .                         4      6
+SLASH                /                         4      8
 IDENTIFIER           app                       4      9
 ENV                  ENV                       5      1
 IDENTIFIER           PORT                      5      5
 EQUALS               =                         5      9
-NUMBER               8080                      5      10
+IDENTIFIER           8080                      5      10
 EXPOSE               EXPOSE                    6      1
-NUMBER               8080                      6      8
+IDENTIFIER           8080                      6      8
 CMD                  CMD                       7      1
 LBRACKET             [                         7      5
+QUOTE                "                         7      6
 IDENTIFIER           python                    7      7
+QUOTE                "                         7      13
 COMMA                ,                         7      14
+QUOTE                "                         7      16
 IDENTIFIER           app.py                    7      17
+QUOTE                "                         7      23
 RBRACKET             ]                         7      24
 ```
 
@@ -189,12 +210,14 @@ IDENTIFIER           ubuntu                    1      6
 RUN                  RUN                       2      1
 IDENTIFIER           apt-get                   2      5
 IDENTIFIER           update                    2      13
-ERROR                @                         2      20
+AT                   @                         2      20
 COPY                 COPY                      3      1
-ERROR                .                         3      6
-ERROR                /                         3      8
+DOT                  .                         3      6
+SLASH                /                         3      8
 IDENTIFIER           app                       3      9
 ```
+
+**Nota:** El carácter @ en este contexto es reconocido como AT, un token válido (puede aparecer en correos electrónicos dentro de etiquetas). Si se desea probar un error real, se puede utilizar un carácter como $ o # fuera de un comentario.
 
 ## Cómo funciona el código
 1. Definición de tokens
