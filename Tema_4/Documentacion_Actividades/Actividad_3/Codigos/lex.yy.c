@@ -600,22 +600,21 @@ goto find_rule; \
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "rust_lexer.l"
+#line 1 ".\\rust_lexer.l"
 #define INITIAL 0
-#line 2 "rust_lexer.l"
+#line 2 ".\\rust_lexer.l"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <dirent.h>   /* para listar directorios (solo Linux/Unix) */
+#include <dirent.h>  
 
 
 /* Función auxiliar para imprimir en formato tabla */
 void imprimir_token(const char *tipo, const char *lexema) {
-    /* Ancho fijo: 20 caracteres para el tipo, luego el lexema */
     printf("%-20s %s\n", tipo, lexema);
 }
 
-#line 619 "lex.yy.c"
+#line 618 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -766,11 +765,11 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 20 "rust_lexer.l"
+#line 19 ".\\rust_lexer.l"
 
 
  /* Palabras clave (cada una en su línea) */
-#line 774 "lex.yy.c"
+#line 773 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -863,643 +862,643 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 23 "rust_lexer.l"
+#line 22 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 24 "rust_lexer.l"
+#line 23 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 25 "rust_lexer.l"
+#line 24 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 26 "rust_lexer.l"
+#line 25 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 27 "rust_lexer.l"
+#line 26 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 28 "rust_lexer.l"
+#line 27 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 29 "rust_lexer.l"
+#line 28 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 30 "rust_lexer.l"
+#line 29 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 31 "rust_lexer.l"
+#line 30 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 32 "rust_lexer.l"
+#line 31 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 33 "rust_lexer.l"
+#line 32 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 34 "rust_lexer.l"
+#line 33 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 35 "rust_lexer.l"
+#line 34 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 36 "rust_lexer.l"
+#line 35 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 37 "rust_lexer.l"
+#line 36 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 38 "rust_lexer.l"
+#line 37 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 39 "rust_lexer.l"
+#line 38 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 40 "rust_lexer.l"
+#line 39 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 41 "rust_lexer.l"
+#line 40 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 42 "rust_lexer.l"
+#line 41 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 43 "rust_lexer.l"
+#line 42 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 44 "rust_lexer.l"
+#line 43 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 45 "rust_lexer.l"
+#line 44 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 46 "rust_lexer.l"
+#line 45 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 47 "rust_lexer.l"
+#line 46 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 48 "rust_lexer.l"
+#line 47 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 49 "rust_lexer.l"
+#line 48 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 50 "rust_lexer.l"
+#line 49 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 51 "rust_lexer.l"
+#line 50 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 52 "rust_lexer.l"
+#line 51 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 53 "rust_lexer.l"
+#line 52 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 54 "rust_lexer.l"
+#line 53 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 55 "rust_lexer.l"
+#line 54 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 56 "rust_lexer.l"
+#line 55 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 57 "rust_lexer.l"
+#line 56 ".\\rust_lexer.l"
 { imprimir_token("KEYWORD", yytext); }
 	YY_BREAK
 /* Tipos primitivos */
 case 36:
 YY_RULE_SETUP
-#line 60 "rust_lexer.l"
+#line 59 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 61 "rust_lexer.l"
+#line 60 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 62 "rust_lexer.l"
+#line 61 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 63 "rust_lexer.l"
+#line 62 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 64 "rust_lexer.l"
+#line 63 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 65 "rust_lexer.l"
+#line 64 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 66 "rust_lexer.l"
+#line 65 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 67 "rust_lexer.l"
+#line 66 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 68 "rust_lexer.l"
+#line 67 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 69 "rust_lexer.l"
+#line 68 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 70 "rust_lexer.l"
+#line 69 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 71 "rust_lexer.l"
+#line 70 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 72 "rust_lexer.l"
+#line 71 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 73 "rust_lexer.l"
+#line 72 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 74 "rust_lexer.l"
+#line 73 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 75 "rust_lexer.l"
+#line 74 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 76 "rust_lexer.l"
+#line 75 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 77 "rust_lexer.l"
+#line 76 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 78 "rust_lexer.l"
+#line 77 ".\\rust_lexer.l"
 { imprimir_token("TYPE", yytext); }
 	YY_BREAK
 /* Literales booleanos */
 case 55:
 YY_RULE_SETUP
-#line 81 "rust_lexer.l"
+#line 80 ".\\rust_lexer.l"
 { imprimir_token("BOOL", yytext); }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 82 "rust_lexer.l"
+#line 81 ".\\rust_lexer.l"
 { imprimir_token("BOOL", yytext); }
 	YY_BREAK
 /* Literales con sufijo de tipo */
 case 57:
 YY_RULE_SETUP
-#line 85 "rust_lexer.l"
+#line 84 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 86 "rust_lexer.l"
+#line 85 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 87 "rust_lexer.l"
+#line 86 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 88 "rust_lexer.l"
+#line 87 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 89 "rust_lexer.l"
+#line 88 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 90 "rust_lexer.l"
+#line 89 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 91 "rust_lexer.l"
+#line 90 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 92 "rust_lexer.l"
+#line 91 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 93 "rust_lexer.l"
+#line 92 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 94 "rust_lexer.l"
+#line 93 ".\\rust_lexer.l"
 { imprimir_token("INT_SUFFIX", yytext); }
 	YY_BREAK
 /* Números flotantes */
 case 67:
 YY_RULE_SETUP
-#line 97 "rust_lexer.l"
+#line 96 ".\\rust_lexer.l"
 { imprimir_token("FLOAT", yytext); }
 	YY_BREAK
 /* Enteros simples */
 case 68:
 YY_RULE_SETUP
-#line 100 "rust_lexer.l"
+#line 99 ".\\rust_lexer.l"
 { imprimir_token("INT", yytext); }
 	YY_BREAK
 /* Caracteres */
 case 69:
 YY_RULE_SETUP
-#line 103 "rust_lexer.l"
+#line 102 ".\\rust_lexer.l"
 { imprimir_token("CHAR", yytext); }
 	YY_BREAK
 /* Cadenas */
 case 70:
 YY_RULE_SETUP
-#line 106 "rust_lexer.l"
+#line 105 ".\\rust_lexer.l"
 { imprimir_token("STRING", yytext); }
 	YY_BREAK
 /* Operadores de varios caracteres */
 case 71:
 YY_RULE_SETUP
-#line 109 "rust_lexer.l"
+#line 108 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 110 "rust_lexer.l"
+#line 109 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 111 "rust_lexer.l"
+#line 110 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 112 "rust_lexer.l"
+#line 111 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 113 "rust_lexer.l"
+#line 112 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
-#line 114 "rust_lexer.l"
+#line 113 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
-#line 115 "rust_lexer.l"
+#line 114 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 116 "rust_lexer.l"
+#line 115 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 117 "rust_lexer.l"
+#line 116 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 118 "rust_lexer.l"
+#line 117 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 119 "rust_lexer.l"
+#line 118 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 120 "rust_lexer.l"
+#line 119 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
-#line 121 "rust_lexer.l"
+#line 120 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
-#line 122 "rust_lexer.l"
+#line 121 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 123 "rust_lexer.l"
+#line 122 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
-#line 124 "rust_lexer.l"
+#line 123 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
-#line 125 "rust_lexer.l"
+#line 124 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
-#line 126 "rust_lexer.l"
+#line 125 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 89:
 YY_RULE_SETUP
-#line 127 "rust_lexer.l"
+#line 126 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
-#line 128 "rust_lexer.l"
+#line 127 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
-#line 129 "rust_lexer.l"
+#line 128 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 92:
 YY_RULE_SETUP
-#line 130 "rust_lexer.l"
+#line 129 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 93:
 YY_RULE_SETUP
-#line 131 "rust_lexer.l"
+#line 130 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 /* Operadores de un solo carácter y símbolos */
 case 94:
 YY_RULE_SETUP
-#line 134 "rust_lexer.l"
+#line 133 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 95:
 YY_RULE_SETUP
-#line 135 "rust_lexer.l"
+#line 134 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 96:
 YY_RULE_SETUP
-#line 136 "rust_lexer.l"
+#line 135 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 97:
 YY_RULE_SETUP
-#line 137 "rust_lexer.l"
+#line 136 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 98:
 YY_RULE_SETUP
-#line 138 "rust_lexer.l"
+#line 137 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 99:
 YY_RULE_SETUP
-#line 139 "rust_lexer.l"
+#line 138 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 100:
 YY_RULE_SETUP
-#line 140 "rust_lexer.l"
+#line 139 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 101:
 YY_RULE_SETUP
-#line 141 "rust_lexer.l"
+#line 140 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 102:
 YY_RULE_SETUP
-#line 142 "rust_lexer.l"
+#line 141 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 103:
 YY_RULE_SETUP
-#line 143 "rust_lexer.l"
+#line 142 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 104:
 YY_RULE_SETUP
-#line 144 "rust_lexer.l"
+#line 143 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 105:
 YY_RULE_SETUP
-#line 145 "rust_lexer.l"
+#line 144 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 106:
 YY_RULE_SETUP
-#line 146 "rust_lexer.l"
+#line 145 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
-#line 147 "rust_lexer.l"
+#line 146 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
-#line 148 "rust_lexer.l"
+#line 147 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
-#line 149 "rust_lexer.l"
+#line 148 ".\\rust_lexer.l"
 { imprimir_token("OP", yytext); }
 	YY_BREAK
 case 110:
 YY_RULE_SETUP
-#line 150 "rust_lexer.l"
+#line 149 ".\\rust_lexer.l"
 { imprimir_token("DOT", yytext); }
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
-#line 151 "rust_lexer.l"
+#line 150 ".\\rust_lexer.l"
 { imprimir_token("COMMA", yytext); }
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
-#line 152 "rust_lexer.l"
+#line 151 ".\\rust_lexer.l"
 { imprimir_token("SEMICOLON", yytext); }
 	YY_BREAK
 case 113:
 YY_RULE_SETUP
-#line 153 "rust_lexer.l"
+#line 152 ".\\rust_lexer.l"
 { imprimir_token("COLON", yytext); }
 	YY_BREAK
 case 114:
 YY_RULE_SETUP
-#line 154 "rust_lexer.l"
+#line 153 ".\\rust_lexer.l"
 { imprimir_token("LPAREN", yytext); }
 	YY_BREAK
 case 115:
 YY_RULE_SETUP
-#line 155 "rust_lexer.l"
+#line 154 ".\\rust_lexer.l"
 { imprimir_token("RPAREN", yytext); }
 	YY_BREAK
 case 116:
 YY_RULE_SETUP
-#line 156 "rust_lexer.l"
+#line 155 ".\\rust_lexer.l"
 { imprimir_token("LBRACE", yytext); }
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
-#line 157 "rust_lexer.l"
+#line 156 ".\\rust_lexer.l"
 { imprimir_token("RBRACE", yytext); }
 	YY_BREAK
 case 118:
 YY_RULE_SETUP
-#line 158 "rust_lexer.l"
+#line 157 ".\\rust_lexer.l"
 { imprimir_token("LBRACKET", yytext); }
 	YY_BREAK
 case 119:
 YY_RULE_SETUP
-#line 159 "rust_lexer.l"
+#line 158 ".\\rust_lexer.l"
 { imprimir_token("RBRACKET", yytext); }
 	YY_BREAK
 /* Identificadores */
 case 120:
 YY_RULE_SETUP
-#line 162 "rust_lexer.l"
+#line 161 ".\\rust_lexer.l"
 { imprimir_token("IDENTIFIER", yytext); }
 	YY_BREAK
 /* Comentarios (ignorar) */
 case 121:
 YY_RULE_SETUP
-#line 165 "rust_lexer.l"
+#line 164 ".\\rust_lexer.l"
 { /* ignorar */ }
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
-#line 166 "rust_lexer.l"
+#line 165 ".\\rust_lexer.l"
 { /* ignorar */ }
 	YY_BREAK
 /* Espacios en blanco */
 case 123:
 YY_RULE_SETUP
-#line 169 "rust_lexer.l"
+#line 168 ".\\rust_lexer.l"
 { /* ignorar */ }
 	YY_BREAK
 /* Error */
 case 124:
 YY_RULE_SETUP
-#line 172 "rust_lexer.l"
+#line 171 ".\\rust_lexer.l"
 { printf("ERROR LEXICO: caracter inesperado '%s' en línea %d\n", yytext, yylineno); }
 	YY_BREAK
 case 125:
 YY_RULE_SETUP
-#line 174 "rust_lexer.l"
+#line 173 ".\\rust_lexer.l"
 ECHO;
 	YY_BREAK
-#line 1503 "lex.yy.c"
+#line 1502 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -2383,7 +2382,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 174 "rust_lexer.l"
+#line 173 ".\\rust_lexer.l"
 
 
 /* Función para procesar un archivo */
