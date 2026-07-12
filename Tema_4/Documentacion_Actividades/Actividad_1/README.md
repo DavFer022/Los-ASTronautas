@@ -79,6 +79,7 @@ Definimos un Autómata de Pila `P₁ = (Q, Σ, Γ, δ, q₀, Z₀, F)`:
 | `δ(q₂, ε, Z₀) = {(qₐ, Z₀)}` | Transición final al estado de aceptación. |
 
 #### Representación Gráfica
+```
 
       a, Z₀ → AZ₀        a, A → AA         b, A → ε          ε, Z₀ → Z₀
    ┌──────────────┐   ┌────────────┐   ┌────────────┐   ┌────────────┐
@@ -90,7 +91,7 @@ Definimos un Autómata de Pila `P₁ = (Q, Σ, Γ, δ, q₀, Z₀, F)`:
    └───────────────┴─────────────────────────────────────────────┘
                      ε, Z₀ → Z₀
 
-
+```
 #### Simulación de la Cadena "aaabbb"
 
 | Paso | Estado | Entrada Restante | Pila (cima → fondo) | Transición Aplicada |
@@ -225,14 +226,13 @@ Un Autómata Finito tiene un número fijo de estados. Para reconocer aⁿbⁿ, n
 
 La Jerarquía de Chomsky clasifica los lenguajes formales en cuatro niveles:
 
-Lenguajes Recursivamente Enumerables (Máquinas de Turing) - Tipo 0
-                    ↑
-Lenguajes Sensibles al Contexto (Autómatas Linealmente Acotados) - Tipo 1
-                    ↑
-Lenguajes Libres de Contexto (Autómatas de Pila) - Tipo 2    ← ¡Aquí estamos!
-                    ↑
-Lenguajes Regulares (Autómatas Finitos) - Tipo 3
-
+    Lenguajes Recursivamente Enumerables (Máquinas de Turing) - Tipo 0
+                        ↑
+    Lenguajes Sensibles al Contexto (Autómatas Linealmente Acotados) - Tipo 1
+                        ↑
+    Lenguajes Libres de Contexto (Autómatas de Pila) - Tipo 2    ← ¡Aquí estamos!
+                        ↑
+    Lenguajes Regulares (Autómatas Finitos) - Tipo 3
 
 El Autómata de Pila es el modelo teórico que reconoce exactamente los Lenguajes Libres de Contexto, que son la base de la mayoría de los lenguajes de programación modernos.
 
