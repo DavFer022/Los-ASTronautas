@@ -32,5 +32,5 @@ Cada subcarpeta contiene:
 | Actividad 3 | Carlos García | Completado |
 | Actividad 4 | Génesis Varguillas | Pendiente |
 | Informe final | Líder (Sheen) | Completado |
-| Presentación | Todos | Pendiente |
-| Video de defensa | Cada integrante | Pendiente |
+| Presentación | Todos | Completado |
+| Video de defensa | Cada integrante | Completado |
