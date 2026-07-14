@@ -28,7 +28,7 @@ En la parte práctica, se desarrollan cuatro actividades:
 | Entregable | Enlace |
 |------------|--------|
 | **Informe de investigación (PDF)** | [Ver PDF](./Informe_Tema_4_LosASTronautas.pdf) |
-| **Presentación (PDF)** | [Ver PDF](./Presentacion_Tema_4_LosASTronautas.pptx) |
+| **Presentación (PDF)** | [Ver PDF](./Presentacion_Tema_4_LosASTronautas.pdf) |
 | **Video de defensa** | [Ver en Google Drive](https://drive.google.com/file/d/[ID_DEL_VIDEO]/view) |
 
 ---
