@@ -30,7 +30,7 @@ Cada subcarpeta contiene:
 | Actividad 1 | Mariangel Antoima | Completado |
 | Actividad 2 | Sheen Alburquerque | Completado |
 | Actividad 3 | Carlos García | Completado |
-| Actividad 4 | Génesis Varguillas | Pendiente |
+| Actividad 4 | Génesis Varguillas | Completado |
 | Informe final | Líder (Sheen) | Completado |
 | Presentación | Todos | Completado |
 | Video de defensa | Cada integrante | Completado |
