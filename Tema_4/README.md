@@ -29,7 +29,7 @@ En la parte práctica, se desarrollan cuatro actividades:
 |------------|--------|
 | **Informe de investigación (PDF)** | [Ver PDF](./Informe_Tema_4_LosASTronautas.pdf) |
 | **Presentación (PDF)** | [Ver PDF](./Presentación_Tema_4_LosASTronautas.pdf) |
-| **Video de defensa** | [Ver en Google Drive](https://drive.google.com/file/d/[ID_DEL_VIDEO]/view) |
+| **Video de defensa** | [Ver en Google Drive]([https://drive.google.com/file/d/[ID_DEL_VIDEO]/view](https://drive.google.com/file/d/1lvs1nQJf8aC6P8hnzyDKYG0Im2voCcJR/view)) |
 
 ---
 
