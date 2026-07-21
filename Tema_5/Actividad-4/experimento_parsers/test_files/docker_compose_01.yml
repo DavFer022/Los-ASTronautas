@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - net_1
+      - net_2
+networks:
+  net_1:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.1.0/24
+  net_2:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.2.0/24

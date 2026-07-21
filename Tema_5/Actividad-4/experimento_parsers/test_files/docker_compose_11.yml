@@ -1,0 +1,138 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - net_1
+      - net_2
+      - net_3
+      - net_4
+      - net_5
+      - net_6
+      - net_7
+      - net_8
+      - net_9
+      - net_10
+      - net_11
+      - net_12
+      - net_13
+      - net_14
+      - net_15
+      - net_16
+      - net_17
+      - net_18
+      - net_19
+      - net_20
+      - net_21
+      - net_22
+networks:
+  net_1:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.1.0/24
+  net_2:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.2.0/24
+  net_3:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.3.0/24
+  net_4:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.4.0/24
+  net_5:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.5.0/24
+  net_6:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.6.0/24
+  net_7:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.7.0/24
+  net_8:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.8.0/24
+  net_9:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.9.0/24
+  net_10:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.10.0/24
+  net_11:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.11.0/24
+  net_12:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.12.0/24
+  net_13:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.13.0/24
+  net_14:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.14.0/24
+  net_15:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.15.0/24
+  net_16:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.16.0/24
+  net_17:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.17.0/24
+  net_18:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.18.0/24
+  net_19:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.19.0/24
+  net_20:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.20.0/24
+  net_21:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.21.0/24
+  net_22:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.22.0/24

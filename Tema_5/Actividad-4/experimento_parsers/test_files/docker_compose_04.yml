@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - net_1
+      - net_2
+      - net_3
+      - net_4
+      - net_5
+      - net_6
+      - net_7
+      - net_8
+networks:
+  net_1:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.1.0/24
+  net_2:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.2.0/24
+  net_3:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.3.0/24
+  net_4:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.4.0/24
+  net_5:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.5.0/24
+  net_6:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.6.0/24
+  net_7:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.7.0/24
+  net_8:
+    driver: bridge
+    ipam:
+      config:
+        subnet: 172.20.8.0/24
