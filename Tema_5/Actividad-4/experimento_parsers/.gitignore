@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# C / Compilación
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+parser.tab.c
+parser.tab.h
+lex.yy.c
+
+# Bison/Flex específico
+*.yy
+*.ll
+*.output
+
+# .NET
+bin/
+obj/
+.vs/
+*.csproj.user
+*.sln.user
+packages/
+
+# Archivos generados por ANTLR
+DockerCompose*.py
+DockerCompose*.cs
+DockerCompose*.interp
+DockerCompose*.tokens
+
+# Resultados temporales (pero mantener los pre-generados)
+# times_*.csv  (comentado: queremos mantener times.csv original)
+*.tmp
+
+# Sistema operativo
+Thumbs.db
+.DS_Store

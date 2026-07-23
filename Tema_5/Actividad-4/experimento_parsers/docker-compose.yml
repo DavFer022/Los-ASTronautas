@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  parser-experiment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: parser-experiment
+
+    volumes:
+      # Mapear los resultados para que persistan en la máquina host
+      - ./results:/app/results
+      - ./test_files:/app/test_files
+
+    environment:
+      # Hacer output de Python visible en tiempo real
+      - PYTHONUNBUFFERED=1
+
+    # Mantener el contenedor corriendo después de completar
+    tty: true
+    stdin_open: true
+
+    # Mostrar todos los logs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
