@@ -15,15 +15,16 @@ El AST es la estructura de datos central que utilizarán las fases posteriores d
 | **Facilidad de Procesamiento** | Su diseño simplifica el recorrido para el análisis de tipos, la verificación semántica y la generación de código |
 | **Independencia de la Sintaxis** | Dos programas con diferente estilo de codificación pero idéntica semántica producirán AST equivalentes |
 
-## 1.3. Ejemplos de AST
+# 1.3. Ejemplos de AST
 
-### Ejemplo 1: Expresión Aritmética
+## Ejemplo 1: Expresión Aritmética
 
 | Código Fuente | AST Resultante |
 |---------------|----------------|
-| `(5 + 3) * 2` | ![AST para (5+3)*2](media/image2.png) |
+| `(5 + 3) * 2` | `├─ operador_binario: * (línea 1)` <br> `│  ├─ operador_binario: + (línea 1)` <br> `│  │  ├─ numero: 5 (línea 1)` <br> `│  │  └─ numero: 3 (línea 1)` <br> `│  └─ numero: 2 (línea 1)` |
 
-**Representación textual del AST:**                                                                                         
+
+**Representación textual del AST:**
 ```
     [*]
    /   \
@@ -32,25 +33,25 @@ El AST es la estructura de datos central que utilizarán las fases posteriores d
 [5] [3]
 ```
 
+
 **Explicación:** La expresión `(5 + 3) * 2` se representa como un árbol donde la raíz es el operador `*`, el hijo izquierdo es la operación `+` con sus operandos `5` y `3`, y el hijo derecho es el literal `2`. Esta estructura refleja la precedencia de operadores.
 
 
-### Ejemplo 2: Sentencia Condicional
+## Ejemplo 2: Sentencia Condicional
 
 | Código Fuente | AST Resultante |
 |---------------|----------------|
-| if (x > 0) { y = 1; } | ![AST para sentencia if](media/image3.png) |
+| `if (x > 0) { y = 1; }` | `├─ if (línea 1)` <br> `│  ├─ operador_comparacion: > (línea 1)` <br> `│  │  ├─ variable: x (línea 1)` <br> `│  │  └─ numero: 0 (línea 1)` <br> `│  └─ asignacion: = (línea 1)` <br> `│     ├─ variable: y (línea 1)` <br> `│     └─ numero: 1 (línea 1)` |
 
 **Representación textual del AST:**
 ```
-   [If]
+ [If]
   /    \
 [>]   [Assign]
 / \    /    \
 [x][0] [y]  [1]
 ```
-
-**Explicación:** La sentencia `if` se representa como un nodo con dos hijos: la condición (`x > 0`) y el cuerpo de la sentencia (`y = 1`). La condición es una operación de comparación y el cuerpo es una asignación.
+Explicación: La sentencia if se representa como un nodo con dos hijos: la condición (x > 0) y el cuerpo de la sentencia (y = 1). La condición es una operación de comparación y el cuerpo es una asignación.
 
 ## 1.4. Implementación
 
