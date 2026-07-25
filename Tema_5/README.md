@@ -1,10 +1,7 @@
 # Tema 5 - Análisis Sintáctico
 
 **Grupo:** Los ASTronautas  
-**Eslogan:** "Explorando el universo de los lenguajes, un nodo a la vez"  
-**Asignatura:** Lenguajes y Compiladores (UNEG)  
-**Profesor:** Ing. Félix Márquez, Msc  
-**Periodo lectivo:** 2026-I
+**Eslogan:** "Explorando el universo de los lenguajes, un nodo a la vez" 
 
 ---
 
