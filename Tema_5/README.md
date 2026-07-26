@@ -25,7 +25,7 @@ El trabajo se ha estructurado en cinco actividades principales:
 |------------|--------|
 | **Informe de investigación (PDF)** | [Ver PDF](./Informe_Tema_5_LosASTronautas.pdf) |
 | **Presentación (PDF)** | [Ver PDF](./Presentación_Tema_5_LosASTronautas.pdf) |
-| **Video de defensa** | [Ver en Google Drive](https://drive.google.com/file/d/[ID_DEL_VIDEO]/view) |
+| **Video de defensa** | [Ver en Google Drive](https://drive.google.com/file/d/12sXCHeQKm36s1raDDIb3DC5tx_Mi07gU/view) |
 
 ---
 
