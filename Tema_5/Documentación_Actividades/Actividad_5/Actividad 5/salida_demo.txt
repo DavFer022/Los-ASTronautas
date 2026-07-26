@@ -1,0 +1,100 @@
+======================================================================
+CÓDIGO FUENTE (UnegScript):
+----------------------------------------------------------------------
+pront x = 5;
+if x > 3 prnt(x) else prnt("no")
+======================================================================
+
+[1] TOKENS CORREGIDOS
+----------------------------------------------------------------------
+  <KEYWORD:'print' (orig:'pront') L1C1>
+  <ID:'x' L1C7>
+  <OP:'=' L1C9>
+  <NUMBER:'5' L1C11>
+  <OP:';' L1C12>
+  <KEYWORD:'if' L2C1>
+  <ID:'x' L2C4>
+  <OP:'>' L2C6>
+  <NUMBER:'3' L2C8>
+  <KEYWORD:'print' (orig:'prnt') L2C10>
+  <OP:'(' L2C14>
+  <ID:'x' L2C15>
+  <OP:')' L2C16>
+  <KEYWORD:'else' L2C18>
+  <KEYWORD:'print' (orig:'prnt') L2C23>
+  <OP:'(' L2C27>
+  <STRING:'"no"' L2C28>
+  <OP:')' L2C32>
+  <EOF:'' L2C0>
+
+[2] AST (Árbol de Sintaxis Abstracta)
+----------------------------------------------------------------------
+{
+  "kind": "Program",
+  "children": [
+    {
+      "kind": "Print",
+      "children": [
+        {
+          "kind": "Var",
+          "value": "x"
+        }
+      ]
+    },
+    {
+      "kind": "If",
+      "children": [
+        {
+          "kind": "Cond",
+          "children": [
+            {
+              "kind": "BinOp",
+              "value": ">",
+              "children": [
+                {
+                  "kind": "Var",
+                  "value": "x"
+                },
+                {
+                  "kind": "Number",
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "Then",
+          "children": [
+            {
+              "kind": "Print",
+              "children": [
+                {
+                  "kind": "Var",
+                  "value": "x"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "Else",
+          "children": [
+            {
+              "kind": "Print",
+              "children": [
+                {
+                  "kind": "String",
+                  "value": "\"no\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+[3] SUGERENCIAS IA
+----------------------------------------------------------------------
