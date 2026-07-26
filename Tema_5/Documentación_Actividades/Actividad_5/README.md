@@ -273,4 +273,4 @@ Como fase evolutiva y trabajo futuro de esta investigación, se plantea la **sus
 La clave arquitectónica radicará en **preservar el diseño modular actual**: el compilador determinista seguirá actuando como filtro primario de alta velocidad, y únicamente ante errores sintácticos complejos o caídas en la confianza léxica (< 0.8), se empaquetará el contexto completo del archivo, la línea del error y el AST parcial para realizar una consulta puntual al LLM. Esto permitirá generar refactorizaciones semánticas avanzadas e inserciones de código altamente contextualizadas, transformando a UnegScript en una plataforma de experimentación de compilación cognitiva de última generación.
 
 ---
-*Informe técnico generado automáticamente por el Asistente de Programación Híbrido — Actividad 5.*
+*Informe técnico para el Asistente de Programación Híbrido — Actividad 5.*
